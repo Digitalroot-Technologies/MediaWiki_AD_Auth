@@ -27,24 +27,24 @@ http://uber.leetphp.com with more info on how to setup this plug-in.
 Put Auth_AD.php in /extensions/
 
 Open LocalSettings.php. Put this at the bottom of the file. Edit as needed.
- 
- /*-----------------[ Everything below this line. ]-----------------*/
- 
- // This requires a user be logged into the wiki to make changes.
- //$wgWhitelistEdit = true; // MediaWiki 1.4 Settings
- $wgGroupPermissions['*']['edit'] = false; // MediaWiki 1.5 or 1.6 Settings
- 
- // Specify who may create new accounts: 0 means no, 1 means yes
- //$wgWhitelistAccount = array ( 'user' => 0, 'sysop' => 1, 'developer' => 1 ); // MediaWiki 1.4 Settings
- $wgGroupPermissions['*']['createaccount'] = false; // MediaWiki 1.5 or 1.6 Settings
- 
- // AD User Database Plugin.
- require_once './extensions/Auth_AD.php';
- 
- 
- $wgAD_Domain = 'example.com';	// Name of your company's domain
-                                // i.e. If your work email is
-                                // myname@example.com.
-                                // set this to example.com
- 
- $wgAuth = new Auth_AD();	// Auth_AD
+        
+        /*-----------------[ Everything below this line. ]-----------------*/
+        
+        // This requires a user be logged into the wiki to make changes.
+        //$wgWhitelistEdit = true; // MediaWiki 1.4 Settings
+        $wgGroupPermissions['*']['edit'] = false; // MediaWiki 1.5 or 1.6 Settings
+        
+        // Specify who may create new accounts: 0 means no, 1 means yes
+        //$wgWhitelistAccount = array ( 'user' => 0, 'sysop' => 1, 'developer' => 1 ); // MediaWiki 1.4 Settings
+        $wgGroupPermissions['*']['createaccount'] = false; // MediaWiki 1.5 or 1.6 Settings
+        
+        // AD User Database Plugin.
+        require_once './extensions/Auth_AD.php';
+        
+        
+        $wgAD_Domain = 'example.com';	// Name of your company's domain
+                                        // i.e. If your work email is
+                                        // myname@example.com.
+                                        // set this to example.com
+        
+        $wgAuth = new Auth_AD();	// Auth_AD
